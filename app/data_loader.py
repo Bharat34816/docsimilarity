@@ -10,10 +10,10 @@ def load_documents_from_urls(urls):
     for url in urls:
         try:
             response = requests.get(url)
-            response.raise_for_status()  # Raise exception for bad status codes
+            response.raise_for_status()  
             documents.append(response.text)
             
-            # Extract filename from URL
+            
             filename = url.split('/')[-1]
             filenames.append(filename)
             
